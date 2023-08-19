@@ -7,3 +7,4 @@ tf-ec2.pem
 terraform.tfstate
 terraform.tfstate.backup
 inventory.ini
+.vscode
