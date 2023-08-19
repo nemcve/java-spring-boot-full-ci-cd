@@ -1,0 +1,21 @@
+- name: Instalacija MySQL-a, Apache-a, Maven-a i JDK-a na EC2 instanci web servera
+  hosts: webserver
+  become: true
+  tasks:
+    - name: Instalacija i enable MySQL-a
+      ansible.builtin.shell: |
+        yum install -y mysql
+        yum install -y mysql-server
+        systemctl start mysqld
+        systemctl enable mysqld
+    - name: Instalacija i enable Apache-a
+      ansible.builtin.shell: |
+        yum install -y httpd
+        systemctl start httpd
+        systemctl enable httpd
+    - name: Instalacija Maven-a
+      ansible.builtin.shell: |
+        yum install -y maven
+    - name: Instalacija JDK-a
+      ansible.builtin.shell:
+        yum install -y java-1.8.0-openjdk

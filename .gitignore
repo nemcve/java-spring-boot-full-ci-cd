@@ -1,0 +1,9 @@
+week-8.pem
+vars.tf
+tf-ec2
+tf-ec2.pem
+.terraform
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+inventory.ini

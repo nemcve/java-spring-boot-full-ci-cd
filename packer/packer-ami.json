@@ -1,0 +1,18 @@
+{
+    "builders" : [{
+        "type": "amazon-ebs",
+        "region": "us-east-1",
+        "source_ami": "ami-026ebd4cfe2c043b2",
+        "instance_type": "t2.micro",
+        "ssh_username": "ec2-user",
+        "ssh_keypair_name":"week-8",
+        "ssh_private_key_file":"~/java-spring-boot-full-ci-cd/week-8.pem",
+        "ami_name": "packer-ci-cd-ami"
+        }],
+        "provisioners" : [{
+            "type":"shell",
+            "inline":[
+                "sudo yum upgrade -y" 
+            ]
+        }]    
+}
