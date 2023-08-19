@@ -8,3 +8,4 @@ terraform.tfstate
 terraform.tfstate.backup
 inventory.ini
 .vscode
+mysql -h mysql–instance1.123456789012.us-east-1.rds.amazonaws.com -P 3306 -u mymasteruser -p
