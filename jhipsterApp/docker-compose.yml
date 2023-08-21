@@ -1,0 +1,21 @@
+version: "3"
+services:
+  javaimage:
+    image: javaimage
+    ports:
+      - "8080:8080"
+    networks:
+      - javaimage-mysql
+    depends_on:
+      - mysqldb
+ 
+  mysqldb:
+    image: mysql:8
+    networks:
+      - javaimage-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=jhipsterSampleApplication  
+
+networks:
+  javaimage-mysql: 
